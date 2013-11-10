@@ -1,0 +1,21 @@
+.headingLogos
+{
+   max-height:300px;
+   max-width:400px;
+}
+
+.navbar
+{
+    background: #FFAA00;
+}
+
+li a
+{
+    color: #FFFFFF;
+}
+
+.nav .caret
+{
+    border-bottom-color:#FFFFFF;
+    border-top-color:#FFFFFF;
+}

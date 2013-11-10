@@ -1,4 +1,4 @@
 <div class='row'>
-    <div class='span12'>
+    <div class='span4'>
     </div>
 </div>
