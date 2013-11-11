@@ -18,10 +18,10 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="/welcome/aboutpl">About Promote Leads</a></li>
-            <li class="divider"></li>
-            <li><a href="#">About Chapters</a></li>
-            <li class="divider"></li>
-            <li><a href="#">About Member</a></li>
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">About Chapters</a></li> -->
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">About Member</a></li> -->
           </ul>
         </li>
         <li class="dropdown">
@@ -37,11 +37,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Contact Promote Leads</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Contact Chapter</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Contact Member</a></li>
+            <li><a href="/welcome/contactus">Contact Promote Leads</a></li>
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">Contact Chapter</a></li> -->
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">Contact Member</a></li> -->
           </ul>
         </li>
        <!-- <li class="dropdown"> -->

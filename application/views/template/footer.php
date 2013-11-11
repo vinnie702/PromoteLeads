@@ -1,3 +1,5 @@
+
+      <hr>
         <div class="row">
           <div class="col-lg-12">
             <p class="pull-right"><a href="/welcome/termsofuse">Terms of Use</a> | <a href="/welcome/privacypolicy">Privacy Policy</a></p>
@@ -11,6 +13,5 @@
     </div><!-- /.section-colored -->
     <div class="container">
 
-      <hr>
 
 

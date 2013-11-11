@@ -16,9 +16,9 @@
             </div>
           </div>
           <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+            <div class="fill"><img src='/public/img/georgePic2.jpg'></div>
             <div class="carousel-caption">
-              <h1>Ready to Style &amp; Add Content</h1>
+              <h1>Create connections for you businesses future</h1>
             </div>
           </div>
           <div class="item">
