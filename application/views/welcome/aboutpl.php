@@ -18,9 +18,9 @@
           <img class="img-responsive" src="/public/img/plLogo750x450.jpg">
         </div>
         <div class="col-md-6">
-          <h2>Welcome to 'Modern Business Networking'</h2>
+          <center><h3 class='title'>Welcome to 'Modern Business Networking'</h3></center>
           <p>Promote Leads is all about Business Networking in the 2000's! We don't rely on paper referrals a week after they were collected. We don't believe in listening to the same elevator speech from the same people every week.</p>
-          <p>Our name says it all, we are here to Promote Leads to your company! We help educate business owners on how to generate more of their own leads, we help create leads for eachother. If you are tired of the same old networking group, then you are in the right place! We aren't here to collect your membership fee, we're here to help your business grow!!</p>
+          <p>Our name says it all, we are here to Promote Leads to your company! We help educate business owners on how to generate more of their own leads and help create leads for eachother. If you are tired of the same old networking group, then you are in the right place! We aren't here to collect your membership fee, we're here to help your business grow!!</p>
         </div>
 
       </div>
@@ -106,5 +106,4 @@
 <!--       </div> -->
 <!--  -->
     </div><!-- /.container -->
-
     <div class='container'>

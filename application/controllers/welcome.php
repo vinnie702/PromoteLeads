@@ -37,6 +37,21 @@ class Welcome extends CI_Controller {
         $this->load->view('welcome/contactus');
         $this->load->view('template/footer');
     }
+
+    public function saveContactForm()
+    {
+        if($_POST)
+        {
+            try
+            {
+                
+            }
+            catch(Exception $e)
+            {
+                
+            }
+        }
+    }
 }
 
 /* End of file welcome.php */

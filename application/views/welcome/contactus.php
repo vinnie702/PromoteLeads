@@ -14,7 +14,7 @@
         
         <div class="col-lg-12">
           <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=36.1438364,-115.2028972&amp;spn=56.506174,79.013672&amp;t=m&amp;z=15&amp;output=embed"></iframe>
+          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=36.1438364,-115.2028972&amp;spn=56.506174,79.013672&amp;t=m&amp;z=17&amp;output=embed"></iframe>
         </div>
 
       </div><!-- /.row -->
@@ -32,27 +32,27 @@ if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</
 elseif (isset($_GET['e'])) echo "<div class=\"alert alert-danger\">".$_GET['e']."</div>";  
 
 ?>
-    <form role="form" method="POST" action="welcome/saveContactForm">
+    <form name="contactUs" id="contactUs" method="POST" action="welcome/saveContactForm">
         <div class="row">
           <div class="form-group col-lg-4">
             <label for="input1">Name</label>
-            <input type="text" name="contact_name" class="form-control" id="input1">
+            <input type="text" name="name" class="form-control" id="name">
           </div>
           <div class="form-group col-lg-4">
             <label for="input2">Email Address</label>
-            <input type="text" name="contact_email" class="form-control" id="input2">
+            <input type="text" name="email" class="form-control" id="email">
           </div>
           <div class="form-group col-lg-4">
             <label for="input3">Phone Number</label>
-            <input type="phone" name="contact_phone" class="form-control" id="input3">
+            <input type="phone" name="phone" class="form-control" id="phone">
           </div>
           <div class="clearfix"></div>
           <div class="form-group col-lg-12">
             <label for="input4">Message</label>
-            <textarea name="contact_message" class="form-control" rows="6" id="input4"></textarea>
+            <textarea name="message" class="form-control" rows="6" id="message"></textarea>
           </div>
           <div class="form-group col-lg-12">
-            <input type="hidden" name="save" value="contact">
+            <!-- <input type="hidden" name="save" value="contact"> -->
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
              </div>

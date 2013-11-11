@@ -88,3 +88,21 @@ li a
 {
     background-color: #3F1563;
 }
+
+.video
+{
+    float:left;
+    display:inline;
+    width:400px;
+    height:215px;
+}
+
+.alt
+{
+    color:#3F1563;
+}
+
+.altBlack
+{
+    color:#000000;
+}
