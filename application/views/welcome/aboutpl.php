@@ -30,13 +30,13 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <h2 class="page-header">Our Team</h2>
+          <h2 class="page-header">The Promote Leads Team</h2>
         </div>
 
         <div class="col-sm-4">
         <img class="img-responsive" src="http://placehold.it/750x450">
             <h3>George W. Burroughs III <small>C.E.O.</small></h3>
-            <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+            <p>George handles most of the day to day opperations. He is in charge of Sales/Marketing and works as "the face" of the company.</p>
             <ul class="list-unstyled list-inline list-social-icons">
               <li class="tooltip-social facebook-link"><a href="https://www.facebook.com/LasVegasGeorge" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
               <li class="tooltip-social linkedin-link"><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
@@ -48,7 +48,7 @@
         <div class="col-sm-4">
         <img class="img-responsive" src="http://placehold.it/750x450">
             <h3>Brandon C. Vinall <small>C.F.O.</small></h3>
-            <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+            <p>Brandon handles all of the company finances and book keeping to ensure funds are used the most optimal way possible to help the members of Promote Leads.</p>
             <ul class="list-unstyled list-inline list-social-icons">
               <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
               <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
@@ -60,9 +60,9 @@
         <div class="col-sm-4">
         <img class="img-responsive" src="http://placehold.it/750x450">
             <h3>William Gallios <small>System Management</small></h3>
-            <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+            <p>Will is a Sr. Software Engineer that has built the systems Promote Leads runs on and is one of the owners of CGI Solution who has provided our amazing technologies that we are passing on to the members.</p>
             <ul class="list-unstyled list-inline list-social-icons">
-              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/cgiSolution" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
               <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
               <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
               <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
