@@ -16,7 +16,15 @@ class Chapters extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+     */
+
+    function Welcome()
+    {
+        parent::__construct();
+        $this->load->model('chapter_model', 'chapter', true);
+    }
+
+
 	public function index()
 	{
 		$this->load->view('template/header');
@@ -24,4 +32,13 @@ class Chapters extends CI_Controller {
 		$this->load->view('template/footer');
     }
 
+    public function profile($chapterId)
+    {
+
+        $body['chapter'] = $this->chapter->getChapterInfo($chapterId);
+
+        $this->load->view('template/header');
+		$this->load->view('chapters/profile', $body);
+		$this->load->view('template/footer');
+    }
 }

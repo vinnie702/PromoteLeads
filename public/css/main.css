@@ -110,7 +110,7 @@ li a
 .headshot
 {
     padding:35px;
-    max-height:200px;
+    max-height:150px;
     max-width:250px;
 }
 
@@ -130,4 +130,9 @@ li a
 {
     padding-top:35px;
     padding-left:20px;
+}
+
+.OwnerBio
+{
+    margin:35px;
 }

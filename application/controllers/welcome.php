@@ -16,10 +16,18 @@ class Welcome extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+     */
+
+    function Welcome()
+    {
+        parent::__construct();
+
+        $this->load->model('welcome_model', 'welcome', true);
+    }
+
 	public function index()
 	{
-		$this->load->view('template/header');
+		$this->load->view('template/headerHome');
 		$this->load->view('welcome/home');
 		$this->load->view('template/footer');
     }
@@ -44,11 +52,16 @@ class Welcome extends CI_Controller {
         {
             try
             {
-                
+                $saved = $this->welcome->saveContactUs($_POST);
             }
             catch(Exception $e)
             {
-                
+                $this->function->sendStackTrace($e);
+                header("Location: /welcome/contactUs?site-error=" . urlencode("Error submitting contact form!<br>" . $e->getMessage()));
+            }
+            if(!empty($saved))
+            {
+                header("Location: /welcome/contactUs?site-success=" .urlencode('Your contact form has been submitted. Thank you!'));
             }
         }
     }

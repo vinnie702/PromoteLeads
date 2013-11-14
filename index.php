@@ -1,4 +1,11 @@
 <?php
+date_default_timezone_set('UTC');
+
+DEFINE('DATESTAMP', date('Y-m-d G:i:s'));
+DEFINE('DS', DIRECTORY_SEPARATOR);
+// DEFINE('EOL' PHP_EOL);
+// DEFINE('TAB', "\t");
+
 
 /*
  *---------------------------------------------------------------
@@ -28,12 +35,28 @@
  * By default development will show errors but testing and live will hide them.
  */
 
+/*
+ * sets proper document root to ensure it ends in a direcotry separator
+ */
+
+if (substr($_SERVER['DOCUMENT_ROOT'], -1) !== DIRECTORY_SEPARATOR)
+{
+    $_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR;
+}
+
+/*
+| error logging settings
+*/
+ini_set('log_errors', true);
+ini_set('html_errors', false);
+ini_set('error_log', $_SERVER['DOCUMENT_ROOT'] . '..' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR . 'error_log.txt');
+
 if (defined('ENVIRONMENT'))
 {
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
+			error_reporting(E_ERROR);
 		break;
 	
 		case 'testing':

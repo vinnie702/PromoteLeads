@@ -33,11 +33,14 @@ class Members extends CI_Controller {
 		$this->load->view('template/footer');
     }
 
-    public function profile($userid = null)
+    public function profile($userid)
     {
+        $header['headscript'] = "<script type='text/javascript' src='/min/?f=public/js/members.js{$this->config->item('min_debug')}&amp;{$this->config->item('min_version')}'></script>\n";
+        $header['onload'] = "members.profileInit();";
+
         $body['user'] = $this->member->getUserInfo($userid);
 
-		$this->load->view('template/header');
+		$this->load->view('template/header', $header);
 		$this->load->view('members/profile', $body);
 		$this->load->view('template/footer');
     }

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
@@ -11,6 +13,8 @@
     <script type="text/javascript" src="/public/bootstrap3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/public/js/modern-business.js"></script>
 
+    <?=$headscript?>
+
     <!-- Bootstrap core CSS -->
 
     <link type="text/css" href="/public/bootstrap3/css/bootstrap.min.css" rel="Stylesheet" />
@@ -23,6 +27,6 @@
 
 </head>
 
-<body>
+<body<?=(empty($onload)) ? null : " onload=\"{$onload}\""?>>
 
 

@@ -30,9 +30,19 @@ if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</
 
 // check for a form error
 elseif (isset($_GET['e'])) echo "<div class=\"alert alert-danger\">".$_GET['e']."</div>";  
+?>
+<?php
+    $attr = array
+        (
+            'name' => 'contactUs',
+            'id' => 'contactUs',
+            'method' => 'POST'
+        );
+
+echo form_open('welcome/saveContactForm', $attr);
+
 
 ?>
-    <form name="contactUs" id="contactUs" method="POST" action="welcome/saveContactForm">
         <div class="row">
           <div class="form-group col-lg-4">
             <label for="input1">Name</label>
@@ -53,7 +63,7 @@ elseif (isset($_GET['e'])) echo "<div class=\"alert alert-danger\">".$_GET['e'].
           </div>
           <div class="form-group col-lg-12">
             <!-- <input type="hidden" name="save" value="contact"> -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id='submitBtn' name='submitBtn' class="btn btn-primary">Submit</button>
           </div>
              </div>
         </form>

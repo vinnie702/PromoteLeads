@@ -14,23 +14,46 @@
             echo "<p>{$user->addressLine2}</p>";
             echo "<p>{$user->addressLine3}</p>";
             echo "<p>{$user->city}, {$user->state} {$user->postalCode}</p></strong>";
-?>
-            <ul class="list-unstyled list-inline list-social-icons">
-              <li class="tooltip-social facebook-link"><a href="https://www.facebook.com/cgiSolution" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-              <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/brandonvinall" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-              <!-- <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li> -->
-              <!-- <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li> -->
-            </ul>
+            if(!empty($user->phone)) echo "<p>Office: {$user->phone}</p>";
+            if(!empty($user->mobile)) echo "<p>Mobile: {$user->mobile}</p>";
+            if(!empty($user->fax)) echo "<p>Fax: {$user->fax}</p>";
 
+            echo "<ul class='list-unstyled list-inline list-social-icons'>";
+               if(!empty($user->facebookUrl)) echo "<li class='tooltip-social facebook-link'><a href='https://www.facebook.com/cgiSolution' data-toggle='tooltip' data-placement='top' title='Facebook'><i class='fa fa-facebook-square fa-2x'></i></a></li>";
+               if(!empty($user->linkedInUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.linkedin.com/brandonvinall' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-linkedin-square fa-2x'></i></a></li>";
+               if(!empty($user->twitterUrl)) echo "<li class='tooltip-social twitter-link'><a href='#twitter-profile' data-toggle='tooltip' data-placement='top' title='Twitter'><i class='fa fa-twitter-square fa-2x'></i></a></li>";
+               if(!empty($user->googlePlusUrl)) echo "<li class='tooltip-social google-plus-link'><a href='#google-plus-profile' data-toggle='tooltip' data-placement='top' title='Google+'><i class='fa fa-google-plus-square fa-2x'></i></a></li>";
+               if(!empty($user->companyWebsiteUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.cgisolution.com' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-globe fa-2x'></i></a></li>";
+               if(!empty($user->youtubeUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.cgisolution.com' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-youtube fa-2x'></i></a></li>";
+            echo "</ul>";
+?>
     </div> <!-- /.col3 -->
     <div class='col-md-6 profile-video pull-right'>
-        <iframe width="640" height="360" src="//www.youtube.com/embed/2SL0-eQJHr0?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class='profile-video'>
+            <iframe width="100%" height="100%" src="//www.youtube.com/embed/2SL0-eQJHr0?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div> <!-- /.profileVideo -->
+    </div> <!--/.col6 pull-right -->
 </div> <!-- /.row -->
 <div class='row'>
     <div class='col-md-12'>
+
+<div class='tabbable'>
+<ul class="nav nav-tabs">
+  <li><a href="#OwnerBio" class='purple' data-toggle="tab">Owner Bio</a></li>
+  <li><a href="#CompanyBio" class='purple' data-toggle="tab">Company Bio</a></li>
+  <li><a href="#Videos" class='purple' data-toggle="tab">Videos</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active OwnerBio purple-text" name='OwnerBio' id="OwnerBio">
 <?php
-        echo "<p>{$user->bio}";
+    echo "<p>{$user->bio}</p>";
 ?>
+  </div>
+  <div class="tab-pane CompanyBio purple-text" id="CompanyBio" name='CompanyBio'>Company stuff</div>
+  <div class="tab-pane Videos purple-text" id="Videos" name='Videos'>Videos</div>
+</div> <!-- /.tab-content -->
+</div> <!-- /.tabbable -->
     </div> <!-- /.col12 -->
 </div> <!-- /.row -->
