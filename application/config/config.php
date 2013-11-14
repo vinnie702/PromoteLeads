@@ -357,6 +357,7 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+if (!isset($config['bmsUrl'])) $config['bmsUrl'] = "http://bms.cgisolution.com/";
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

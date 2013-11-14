@@ -106,3 +106,28 @@ li a
 {
     color:#000000;
 }
+
+.headshot
+{
+    padding:35px;
+    max-height:200px;
+    max-width:250px;
+}
+
+.purple-text
+{
+    color:#3F1563;
+}
+
+.profile-video
+{
+    padding-top:15px;
+    margin-bottom:25px;
+    height:360px;
+}
+
+.profileInfo
+{
+    padding-top:35px;
+    padding-left:20px;
+}

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Chapters extends CI_Controller {
+class Members extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -16,12 +16,31 @@ class Chapters extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+     */
+
+    function Members()
+    {
+        parent::__construct();
+
+        $this->load->model('member_model', 'member', true);
+
+    }
+
 	public function index()
 	{
 		$this->load->view('template/header');
-		$this->load->view('chapters/home');
+		$this->load->view('members/home');
 		$this->load->view('template/footer');
     }
+
+    public function profile($userid = null)
+    {
+        $body['user'] = $this->member->getUserInfo($userid);
+
+		$this->load->view('template/header');
+		$this->load->view('members/profile', $body);
+		$this->load->view('template/footer');
+    }
+
 
 }
