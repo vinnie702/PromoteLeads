@@ -27,9 +27,10 @@ class member_model extends CI_Model
      */
     public function getUserInfo($userid)
     {
-        $sql = "SELECT * FROM users WHERE id = {$userid}";
+        $this->db->from('users');
+        $this->db->where('users.id', $userid);
 
-        $query = $this->db->query($sql);
+        $query = $this->db->get();
 
         $results = $query->result();
 
@@ -47,6 +48,22 @@ class member_model extends CI_Model
         $results = $query->result();
 
         return $results;
+    }
+
+
+    public function getMainYoutubeVideo($userid)
+    {
+        $this->db->select('url');
+        $this->db->from('userYouTubeVideos');
+        $this->db->where('company', 6);
+        $this->db->where('userid', $userid);
+        $this->db->where('videoOrder', 0);
+
+        $query = $this->db->get();
+
+        $results = $query->result();
+
+        return $results[0];
     }
 
     /**
@@ -76,5 +93,56 @@ class member_model extends CI_Model
 
         return $data;
     }
+
+
+
+    public function getYoutubeVideoID ($url)
+    {
+        $videoID = null;
+
+        $pattern = '/youtu\.be\//i';
+
+        $standardPattern = "/watch\?v\=/";
+
+        $shareURL = preg_match($pattern, $url);
+
+        $standardURLcheck = preg_match($standardPattern, $url);
+
+        if ($shareURL > 0)
+        {
+            //does not use youtu.be link
+            // echo "YES youtu.be : {$url}";
+            $pos = strpos($url, "youtu.be/");
+            $videoID = substr($url, ($pos + 9));
+        }
+        else if ($standardURLcheck > 0)
+        {
+
+            $pos = strpos($url, "watch?v=");
+
+
+            $videoID = substr($url, ($pos  + 8));
+
+
+            $stop = strpos($videoID, "&");
+
+            if ($stop !== false)
+            {
+                $videoID = substr($videoID, 0, $stop);
+            }
+
+            // echo "VID: {$videoID}<br>";
+
+            // echo "YES Standard : {$url}";
+        }
+        else
+        {
+            return false;
+            // echo "NO MATCH : {$url}";
+        }
+
+        return $videoID;
+    }
+
 
 }

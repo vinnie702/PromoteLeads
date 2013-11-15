@@ -2,7 +2,9 @@
     <div class='col-md-3'>
         <div class='headshot'>
 <?php
-            echo "<img src='/public/img/bvinallHeadshot.jpg'>";
+        echo "<div class='img-thumbnail'>";
+            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/{$user->id}'>";
+        echo "</div>";
 ?>
         </div> <!-- /.headshot -->
     </div> <!-- /.col-md-3 -->
@@ -30,7 +32,9 @@
     </div> <!-- /.col3 -->
     <div class='col-md-6 profile-video pull-right'>
         <div class='profile-video'>
-            <iframe width="100%" height="100%" src="//www.youtube.com/embed/2SL0-eQJHr0?rel=0" frameborder="0" allowfullscreen></iframe>
+<?php
+            echo "<iframe width='100%' height='100%' src='//www.youtube.com/embed/{$videoUrl}' frameborder='0' allowfullscreen></iframe>";
+?>
         </div> <!-- /.profileVideo -->
     </div> <!--/.col6 pull-right -->
 </div> <!-- /.row -->

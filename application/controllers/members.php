@@ -40,6 +40,9 @@ class Members extends CI_Controller {
 
         $body['user'] = $this->member->getUserInfo($userid);
         $body['videos'] = $this->member->getUserVideos($userid);
+        $body['mainVideo'] = $url = $this->member->getMainYoutubeVideo($userid);
+
+        $body['videoUrl'] = $this->member->getYoutubeVideoID($url->url);
 
 		$this->load->view('template/header', $header);
 		$this->load->view('members/profile', $body);
