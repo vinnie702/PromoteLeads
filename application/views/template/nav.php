@@ -27,11 +27,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chapters <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="/chapter/profile/1">Las Vegas</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Henderson</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Downtown</a></li>
+            <li><a href="/chapters/profile/6">Las Vegas</a></li>
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">Henderson</a></li> -->
+            <!-- <li class="divider"></li> -->
+            <!-- <li><a href="#">Downtown</a></li> -->
           </ul>
         </li>
         <li class="dropdown">

@@ -34,7 +34,11 @@
         </div>
 
         <div class="col-sm-4">
-        <img class="img-responsive" src="http://placehold.it/750x450">
+<?php
+        echo "<div class='img-thumbnail'>";
+            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/5'>";
+        echo "</div>";
+?>
             <h3>George W. Burroughs III <small>C.E.O.</small></h3>
             <p>George handles most of the day to day opperations. He is in charge of Sales/Marketing and works as "the face" of the company.</p>
             <ul class="list-unstyled list-inline list-social-icons">
@@ -46,7 +50,12 @@
         </div>
 
         <div class="col-sm-4">
-        <img class="img-responsive" src="http://placehold.it/750x450">
+<?php
+        echo "<div class='img-thumbnail'>";
+            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/2'>";
+        echo "</div>";
+?>
+
             <h3>Brandon C. Vinall <small>C.F.O.</small></h3>
             <p>Brandon handles all of the company finances and book keeping to ensure funds are used the most optimal way possible to help the members of Promote Leads.</p>
             <ul class="list-unstyled list-inline list-social-icons">
@@ -58,7 +67,11 @@
         </div>
 
         <div class="col-sm-4">
-        <img class="img-responsive" src="http://placehold.it/750x450">
+<?php
+        echo "<div class='img-thumbnail'>";
+            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/1'>";
+        echo "</div>";
+?>
             <h3>William Gallios <small>System Management</small></h3>
             <p>Will is a Sr. Software Engineer that has built the systems Promote Leads runs on and is one of the owners of CGI Solution who has provided our amazing technologies that we are passing on to the members.</p>
             <ul class="list-unstyled list-inline list-social-icons">
