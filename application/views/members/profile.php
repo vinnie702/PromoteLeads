@@ -39,20 +39,31 @@
 
 <div class='tabbable'>
 <ul class="nav nav-tabs">
-  <li><a href="#OwnerBio" class='purple' data-toggle="tab">Owner Bio</a></li>
-  <li><a href="#CompanyBio" class='purple' data-toggle="tab">Company Bio</a></li>
+  <li><a href="#Bio" class='purple' data-toggle="tab">Bio</a></li>
+  <li><a href="#contactMember" class='purple' data-toggle="tab">Contact Me!</a></li>
   <li><a href="#Videos" class='purple' data-toggle="tab">Videos</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active OwnerBio purple-text" name='OwnerBio' id="OwnerBio">
+  <div class="tab-pane active OwnerBio purple-text" name='Bio' id="Bio">
 <?php
-    echo "<p>{$user->bio}</p>";
+        echo "<p>";
+            echo nl2br($user->bio);
+        echo "</p>";
 ?>
   </div>
-  <div class="tab-pane CompanyBio purple-text" id="CompanyBio" name='CompanyBio'>Company stuff</div>
-  <div class="tab-pane Videos purple-text" id="Videos" name='Videos'>Videos</div>
+  <div class="tab-pane CompanyBio purple-text" id="contactMember" name='contactMember'>Contact Me! (Yes George, I will put a form here today)</div>
+  <div class="tab-pane Videos purple-text" id="Videos" name='Videos'>
+<?php
+
+    foreach($videos as $r)
+    {
+        $ytid = $this->functions->getYoutubeVideoID($r->url);
+        print_r($r);
+    }
+?>
+</div>
 </div> <!-- /.tab-content -->
 </div> <!-- /.tabbable -->
     </div> <!-- /.col12 -->

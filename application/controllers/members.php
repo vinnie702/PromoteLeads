@@ -39,6 +39,7 @@ class Members extends CI_Controller {
         $header['onload'] = "members.profileInit();";
 
         $body['user'] = $this->member->getUserInfo($userid);
+        $body['videos'] = $this->member->getUserVideos($userid);
 
 		$this->load->view('template/header', $header);
 		$this->load->view('members/profile', $body);

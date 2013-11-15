@@ -603,4 +603,47 @@ class Functions
     {
 
     }
+
+    /**
+     * Gets the youtube ID of the video so it can embbedded etc
+     *
+     * @param String $url - Youtube URL 
+     *
+     * @return String
+     */
+    public function getYoutubeVideoID ($url)
+    {
+        $videoID = null;
+
+        $pattern = '/youtu\.be\//i';
+
+        $standardPattern = "/watch\?v\=/";
+
+        $shareURL = preg_match($pattern, $url);
+
+        $standardURLcheck = preg_match($standardPattern, $url);
+
+        if ($shareURL > 0)
+        {
+            //does not use youtu.be link
+            // echo "YES youtu.be : {$url}";
+            $pos = strpos($url, "youtu.be/");
+            $videoID = substr($url, ($pos + 9));
+        }
+        else if ($standardURLcheck > 0)
+        {
+            $pos = strpos($url, "watch?v=");
+
+            $videoID = substr($url, ($pos  + 8));
+            // echo "YES Standard : {$url}";
+        }
+        else
+        {
+            return false;
+            // echo "NO MATCH : {$url}";
+        }
+
+        return $videoID;
+    }
+
 }
