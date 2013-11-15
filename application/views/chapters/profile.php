@@ -63,20 +63,16 @@
 <div class='row'>
     <div class='col-sm-12'>
 
-
-
 <div class='tabbable'>
 <ul class="nav nav-tabs">
+  <li><a href="#Members" class='purple' data-toggle="tab">Members</a></li>
   <li><a href="#Announcements" class='purple' data-toggle="tab">Announcements</a></li>
   <li><a href="#LocationSpecials" class='purple' data-toggle="tab">Location Specials</a></li>
-  <li><a href="#Members" class='purple' data-toggle="tab">Members</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>
-    <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'><?=$chapter->addDescription?></div>
-  <div class="tab-pane purple-text" id="Members" name='Members'>
+  <div class="tab-pane active purple-text" id="Members" name='Members'>
 <?php
 
     $rcnt = 1;
@@ -85,7 +81,6 @@
     {
         $user = $this->member_model->getUserInfo($r->userid);
         $id = $user->id;
-        // print_r($user);
 
         if($rcnt == 1)
         {
@@ -99,7 +94,7 @@
             echo "</div>";
             echo "<div class='col-sm-2'>";
                 echo "<h4 class='title'>{$user->companyName}</h4></br>";
-                echo "{$user->firstName} {$user->lastName} </br>";
+                echo "<a href='/members/profile/{$user->id}'>{$user->firstName} {$user->lastName}</a> </br>";
                 echo "<a href='mailto:{$user->email}'>{$user->email}</a>";
             echo "</div>";
             $rcnt ++;
@@ -111,7 +106,9 @@
     }
 
 ?>
-</div>
+    </div>
+    <div class="tab-pane purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>
+    <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'><?=$chapter->addDescription?></div>
 </div> <!-- /.tab-content -->
 </div> <!-- /.tabbable -->
 
