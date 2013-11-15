@@ -59,8 +59,24 @@
 
     foreach($videos as $r)
     {
+        $rcnt = 1;
+        if($rcnt == 1)
+        {
+            echo "<div class='row'>";
+        }
         $ytid = $this->functions->getYoutubeVideoID($r->url);
-        print_r($r);
+        echo <<< EOS
+            <div class='ytContainer'>
+                <div class='yt-body'>
+                <iframe class='img-thumbnail' width="252" height="142" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+EOS;
+        if($rcnt == 4)
+        {
+            echo "</div>";
+        }
     }
 ?>
 </div>

@@ -18,14 +18,14 @@ class Chapters extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
      */
 
-    function Welcome()
+    function Chapters()
     {
         parent::__construct();
         $this->load->model('chapter_model', 'chapter', true);
+        $this->load->model('member_model', '', true);
     }
 
-
-	public function index()
+    public function index()
 	{
 		$this->load->view('template/header');
 		$this->load->view('chapters/home');
@@ -34,8 +34,16 @@ class Chapters extends CI_Controller {
 
     public function profile($chapterId)
     {
-
-        $body['chapter'] = $this->chapter->getChapterInfo($chapterId);
+        try
+        {
+            $body['chapter'] = $this->chapter->getChapterInfo($chapterId);
+            $body['members'] = $this->chapter->getChapterMembers($chapterId);
+            $body['cp'] = $this->chapter->getChapterPresident($chapterId);
+        }
+        catch(Exception $e)
+        {
+            $this->functions->sendStackTrace($e);
+        }
 
         $this->load->view('template/header');
 		$this->load->view('chapters/profile', $body);
