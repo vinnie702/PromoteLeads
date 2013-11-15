@@ -14,3 +14,5 @@ WHERE position = 24;
 
 
 SELECT * FROM positions;
+
+SELECT * FROM locationImages;

@@ -39,6 +39,7 @@ class Chapters extends CI_Controller {
             $body['chapter'] = $this->chapter->getChapterInfo($chapterId);
             $body['members'] = $this->chapter->getChapterMembers($chapterId);
             $body['cp'] = $this->chapter->getChapterPresident($chapterId);
+            $body['locationImg'] = $this->chapter->getChapterPhoto($chapterId);
         }
         catch(Exception $e)
         {

@@ -44,11 +44,21 @@
     <div class='col-sm-2'>
     </div>
     <div class='col-sm-3'>
-        <center></center>
-    </div>
-    <div class='col-sm-2'>
-    </div>
-
+<?php
+        echo "<center>";
+            echo "<h5 class='title'>Wonderful Venue</h5>";
+        echo "</center>";
+        echo "{$chapter->address} </br>";
+        echo "{$chapter->address2} </br>";
+        echo "{$chapter->city}, {$chapter->state} {$chapter->postalCode}";
+    echo "</div>";
+    echo "<div class='col-sm-2'>";
+    $locationPic = $locationImg->fileName;
+    echo "<div class='img-thumbnail'>";
+            echo "<img src='http://promoteleads.cgisolution.com/genimg/render/250?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+        echo "</div>";
+    echo "</div>";
+?>
 </div>
 <div class='row'>
     <div class='col-sm-12'>
@@ -64,13 +74,13 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active purple-text" name='Announcements' id="Announcements">...</div>
-  <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'>This will list anything the Location wants to put out to the group.... specials, etc...</div>
+    <div class="tab-pane active purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>
+    <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'><?=$chapter->addDescription?></div>
   <div class="tab-pane purple-text" id="Members" name='Members'>
 <?php
 
     $rcnt = 1;
-        
+
     foreach($members as $r)
     {
         $user = $this->member_model->getUserInfo($r->userid);

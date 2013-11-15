@@ -46,4 +46,18 @@ class chapter_model extends CI_Model
 
         return $results[0];
     }
+
+    public function getChapterPhoto($chapterId)
+    {
+        $this->db->select('fileName');
+        $this->db->from('locationImages');
+        $this->db->where('company', 6);
+        $this->db->where('locationid', $chapterId);
+
+        $query = $this->db->get();
+
+        $results = $query->result();
+
+        return $results[0];
+    }
 }
