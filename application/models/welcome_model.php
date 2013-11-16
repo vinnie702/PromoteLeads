@@ -35,8 +35,9 @@ class welcome_model extends CI_Model
             'email' => $p['email'],
             'phone' => $p['phone'],
             'message' => $p['message'],
-            'timestamp' => DATESTAMP
+            'timestamp' => DATESTAMP,
         );
+        if(!empty($p['userid'])) $data['userid'] = $p['userid'];
 
         $this->db->insert('contactUs', $data);
 

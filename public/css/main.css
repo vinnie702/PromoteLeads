@@ -109,9 +109,7 @@ li a
 
 .headshot
 {
-    padding:35px;
-    max-height:150px;
-    max-width:250px;
+    padding-top:60px;
 }
 
 .purple-text
@@ -121,7 +119,7 @@ li a
 
 .profile-video
 {
-    padding-top:15px;
+    padding-top:30px;
     margin-bottom:25px;
     height:360px;
 }

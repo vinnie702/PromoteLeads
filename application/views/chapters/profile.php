@@ -94,7 +94,7 @@
             echo "</div>";
             echo "<div class='col-sm-2'>";
                 echo "<h4 class='title'>{$user->companyName}</h4></br>";
-                echo "<a href='/members/profile/{$user->id}'>{$user->firstName} {$user->lastName}</a> </br>";
+                echo "<a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a> </br>";
                 echo "<a href='mailto:{$user->email}'>{$user->email}</a>";
             echo "</div>";
             $rcnt ++;
@@ -106,7 +106,8 @@
     }
 
 ?>
-    </div>
+            </div>
+    </div> <!-- /.members -->
     <div class="tab-pane purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>
     <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'><?=$chapter->addDescription?></div>
 </div> <!-- /.tab-content -->

@@ -13,6 +13,9 @@ LEFT JOIN userCompanyPositions uc ON u.id = uc.userid
 LEFT JOIN userLocations ul ON u.id = ul.userid
 WHERE position = 24;
 
+SELECT * FROM contactUs;
+
+EXPLAIN contactUs;
 
 SELECT * FROM positions;
 

@@ -30,9 +30,8 @@ if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</
 
 // check for a form error
 elseif (isset($_GET['e'])) echo "<div class=\"alert alert-danger\">".$_GET['e']."</div>";  
-?>
-<?php
-    $attr = array
+
+$attr = array
         (
             'name' => 'contactUs',
             'id' => 'contactUs',
@@ -62,7 +61,7 @@ echo form_open('welcome/saveContactForm', $attr);
             <textarea name="message" class="form-control" rows="6" id="message"></textarea>
           </div>
           <div class="form-group col-lg-12">
-            <!-- <input type="hidden" name="save" value="contact"> -->
+            <input type="hidden" name="userid" value="">
             <button type="submit" id='submitBtn' name='submitBtn' class="btn btn-primary">Submit</button>
           </div>
              </div>

@@ -42,6 +42,7 @@ class member_model extends CI_Model
         $this->db->from('userYouTubeVideos');
         $this->db->where('company', 6);
         $this->db->where('userid', $userid);
+        $this->db->order_by('videoOrder', 'ASC');
 
         $query = $this->db->get();
 
