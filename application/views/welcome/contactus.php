@@ -84,6 +84,7 @@ echo form_open('welcome/saveContactForm', $attr);
         <li class="tooltip-social linkedin-link"><a href="http://www.linkedin.com/promoteleads" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
         <li class="tooltip-social twitter-link"><a href="http://www.twitter.com/promoteleads" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
         <li class="tooltip-social google-plus-link"><a href="#google-plus-page" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+        <li class="tooltip-social google-plus-link"><a href="https://www.youtube.com/" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fa fa-youtube-square fa-2x"></i></a></li>
       </ul>
     </div>
 

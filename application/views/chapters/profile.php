@@ -46,10 +46,10 @@
     <div class='col-sm-3'>
 <?php
         echo "<center>";
-            echo "<h5 class='title'>Wonderful Venue</h5>";
+            echo "<h5 class='title'>{$chapter->name}</h5>";
         echo "</center>";
         echo "{$chapter->address} </br>";
-        echo "{$chapter->address2} </br>";
+        if(!empty($chapter->address2)) echo "{$chapter->address2} </br>";
         echo "{$chapter->city}, {$chapter->state} {$chapter->postalCode}";
     echo "</div>";
     echo "<div class='col-sm-2'>";
@@ -97,16 +97,23 @@
                 echo "<a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a> </br>";
                 echo "<a href='mailto:{$user->email}'>{$user->email}</a>";
             echo "</div>";
-            $rcnt ++;
-        if($rcnt == 4)
+        if($rcnt == 3)
         {
             echo "</div>";
             $rcnt = 1;
         }
+        else
+        {
+            $rcnt ++;
+        }
+
+    }
+    if($rcnt == 2)
+    {
+        echo "</div>";
     }
 
 ?>
-            </div>
     </div> <!-- /.members -->
     <div class="tab-pane purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>
     <div class="tab-pane purple-text" id="LocationSpecials" name='LocationSpecials'><?=$chapter->addDescription?></div>
