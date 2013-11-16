@@ -53,15 +53,16 @@ class Welcome extends CI_Controller {
             try
             {
                 $saved = $this->welcome->saveContactUs($_POST);
+                $site = $_POST['page'];
             }
             catch(Exception $e)
             {
                 $this->function->sendStackTrace($e);
-                header("Location: /welcome/contactUs?site-error=" . urlencode("Error submitting contact form!<br>" . $e->getMessage()));
+                header("Location: {$site}?site-error=" . urlencode("Error submitting contact form!<br>" . $e->getMessage()));
             }
             if(!empty($saved))
             {
-                header("Location: /welcome/contactUs?site-success=" .urlencode('Your contact form has been submitted. Thank you!'));
+                header("Location: {$site}?site-success=" .urlencode('Your contact form has been submitted. Thank you!'));
             }
         }
     }

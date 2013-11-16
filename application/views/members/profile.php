@@ -97,6 +97,7 @@ echo form_open('welcome/saveContactForm', $attr);
           </div>
           <div class="form-group col-lg-12">
           <input type="hidden" name="userid" value="<?=$user->id?>">
+          <input type="hidden" name="page" value="/members/profile/<?=$user->id?>">
             <button type="submit" id='submitBtn' name='submitBtn' class="btn btn-primary">Submit</button>
           </div>
      </div>
@@ -106,25 +107,30 @@ echo form_open('welcome/saveContactForm', $attr);
   <div class="tab-pane Videos purple-text" id="Videos" name='Videos'>
 <?php
 
+    $rcnt = 1;
     foreach($videos as $r)
     {
-        $rcnt = 1;
         if($rcnt == 1)
         {
+            echo "<hr>";
             echo "<div class='row'>";
         }
         $ytid = $this->member->getYoutubeVideoID($r->url);
         echo <<< EOS
             <div class='ytContainer'>
                 <div class='yt-body'>
-                <iframe class='img-thumbnail' width="252" height="142" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
+                    <iframe class='img-thumbnail' width="252" height="142" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
                 </div>
-
             </div>
 EOS;
         if($rcnt == 4)
         {
             echo "</div>";
+            $rcnt = 1;
+        }
+        else
+        {
+            $rcnt ++;
         }
     }
 ?>

@@ -62,6 +62,7 @@ echo form_open('welcome/saveContactForm', $attr);
           </div>
           <div class="form-group col-lg-12">
             <input type="hidden" name="userid" value="">
+            <input type="hidden" name="page" value="/welcome/contactus">
             <button type="submit" id='submitBtn' name='submitBtn' class="btn btn-primary">Submit</button>
           </div>
              </div>
