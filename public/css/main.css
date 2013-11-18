@@ -1,0 +1,156 @@
+.headingLogos
+{
+   max-height:300px;
+   max-width:400px;
+}
+
+.navbar
+{
+    background: #FFAA00;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+li a
+{
+    color: #FFFFFF;
+}
+
+.nav .caret
+{
+    border-bottom-color:#FFFFFF;
+    border-top-color:#FFFFFF;
+}
+
+.title
+{
+    text-shadow: 10px 10px 5px #888888;
+}
+
+.video
+{
+    width:300px;
+    height:250px;
+}
+
+.purple
+{
+    background: #3f1563; /* Old browsers */
+
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOCUiIHN0b3AtY29sb3I9IiMzZjE1NjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmNmY2ZjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+
+    background: -moz-linear-gradient(top,  #3f1563 28%, #fcfcfc 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(28%,#3f1563), color-stop(100%,#fcfcfc)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #3f1563 28%,#fcfcfc 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #3f1563 28%,#fcfcfc 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #3f1563 28%,#fcfcfc 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #3f1563 28%,#fcfcfc 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f1563', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-8 */
+
+    color:#FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > li > a
+{
+    color:#FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret
+{
+    border-bottom-color:#FFFFFF;
+    border-top-color:#FFFFFF;
+}
+
+.navbar-inverse .navbar-brand
+{
+    color:#FFFFFF;
+}
+
+.item, .active, .carousel-inner
+{
+    /* height:15px; */
+}
+
+.bc
+{
+    height:15px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus
+{
+    background-color: #3F1563;
+}
+
+.video
+{
+    float:left;
+    display:inline;
+    width:400px;
+    height:215px;
+}
+
+.alt
+{
+    color:#3F1563;
+}
+
+.altBlack
+{
+    color:#000000;
+}
+
+.headshot
+{
+    padding-top:60px;
+}
+
+.purple-text
+{
+    color:#3F1563;
+}
+
+.profile-video
+{
+    padding-top:30px;
+    margin-bottom:35px;
+    height:360px;
+}
+
+.profileInfo
+{
+    padding-top:35px;
+    padding-left:20px;
+}
+
+.OwnerBio
+{
+    margin:35px;
+}
+
+.ytContainer
+{
+    float:left;
+}
+
+.pad-right
+{
+    padding-right:45px;
+}
+
+.pad-btm
+{
+    padding-bottom:25px;
+}
+
+.img-thumbnail
+{
+    margin:15px;
+}
