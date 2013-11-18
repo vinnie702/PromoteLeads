@@ -10,7 +10,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <div class="fill"><img src='/public/img/georgePic2.jpg'></div>
+            <div class="fill"><img src='/public/img/plbanner2.jpg'></div>
             <div class="carousel-caption alt">
               <h1>Welcome to Promote Leads, the future of Business Networking!</h1>
             </div>
