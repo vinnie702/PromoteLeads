@@ -27,8 +27,11 @@ class member_model extends CI_Model
      */
     public function getUserInfo($userid)
     {
+        $this->db->select('users.*', 'userCompanies.userid', 'userCompanies.company', 'userCompanies.homCompany');
         $this->db->from('users');
+        $this->db->join('userCompanies', 'users.id = userCompanies.userid', 'left');
         $this->db->where('users.id', $userid);
+        $this->db->where('company', 6);
 
         $query = $this->db->get();
 

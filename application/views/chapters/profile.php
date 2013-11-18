@@ -1,7 +1,7 @@
 <div class='row pad-btm'>
     <div class='col-md-12'>
 <?php
-        echo "<center><h1 class='title purple-text'>{$chapter->name} Chapter</h1></center>";
+        echo "<center><h1 class='purple-text'>{$chapter->name} Chapter</h1></center>";
 ?>
     </div> <!-- /.col12 -->
 </div> <!-- /.row -->
@@ -80,7 +80,8 @@
     foreach($members as $r)
     {
         $user = $this->member_model->getUserInfo($r->userid);
-        $id = $user->id;
+        $id = $r->userid;
+
 
         if($rcnt == 1)
         {
@@ -88,14 +89,15 @@
             echo "<div class='row'>";
         }
             echo "<div class='col-sm-2'>";
-                echo "<div class='img-thumbnail float-left'>";
+                echo "<a href='/members/profile/{$user->id}'><div class='img-thumbnail float-left'>";
                     echo "<img src='http://bms.cgisolution.com/user/profileimg/150/{$id}'>";
-                echo "</div>";
+                echo "</div></a>";
             echo "</div>";
             echo "<div class='col-sm-2'>";
-                echo "<h4 class='title'>{$user->companyName}</h4></br>";
+                echo "<h4 class='title'>{$user->companyName}</h4>";
                 echo "<a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a> </br>";
-                echo "<a href='mailto:{$user->email}'>{$user->email}</a>";
+                echo "<p><i class='fa fa-envelope-o'></i> <abbr title='{$user->email}'>E</abbr>: <a href='mailto:{$user->email}'>E-Mail Me!</a></p>";
+                if(!empty($user->phone)) echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$user->phone}</p>";
             echo "</div>";
         if($rcnt == 3)
         {
@@ -108,11 +110,10 @@
         }
 
     }
-    if($rcnt == 2)
+    if($rcnt < 4 && $rcnt > 1)
     {
         echo "</div>";
     }
-
 ?>
     </div> <!-- /.members -->
     <div class="tab-pane purple-text" name='Announcements' id="Announcements"><?=$chapter->description?></div>

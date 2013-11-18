@@ -15,18 +15,19 @@
     echo "<strong><p>{$user->addressLine1}</p>";
     echo "<p>{$user->addressLine2}</p>";
     echo "<p>{$user->addressLine3}</p>";
-    echo "<p>{$user->city}, {$user->state} {$user->postalCode}</p></strong>";
+    echo "<p>{$user->city}, {$user->state} {$user->postalCode}</p>";
+    echo "</strong>";
     if(!empty($user->phone)) echo "<p>Office: {$user->phone}</p>";
     if(!empty($user->mobile)) echo "<p>Mobile: {$user->mobile}</p>";
     if(!empty($user->fax)) echo "<p>Fax: {$user->fax}</p>";
 
     echo "<ul class='list-unstyled list-inline list-social-icons'>";
-       if(!empty($user->facebookUrl)) echo "<li class='tooltip-social facebook-link'><a href='https://www.facebook.com/cgiSolution' data-toggle='tooltip' data-placement='top' title='Facebook'><i class='fa fa-facebook-square fa-2x'></i></a></li>";
-       if(!empty($user->linkedInUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.linkedin.com/brandonvinall' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-linkedin-square fa-2x'></i></a></li>";
-       if(!empty($user->twitterUrl)) echo "<li class='tooltip-social twitter-link'><a href='#twitter-profile' data-toggle='tooltip' data-placement='top' title='Twitter'><i class='fa fa-twitter-square fa-2x'></i></a></li>";
-       if(!empty($user->googlePlusUrl)) echo "<li class='tooltip-social google-plus-link'><a href='#google-plus-profile' data-toggle='tooltip' data-placement='top' title='Google+'><i class='fa fa-google-plus-square fa-2x'></i></a></li>";
-       if(!empty($user->companyWebsiteUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.cgisolution.com' data-toggle='tooltip' data-placement='top' title='Website'><i class='fa fa-globe fa-2x'></i></a></li>";
-       if(!empty($user->youtubeUrl)) echo "<li class='tooltip-social linkedin-link'><a href='https://www.cgisolution.com' data-toggle='tooltip' data-placement='top' title='YouTube'><i class='fa fa-youtube fa-2x'></i></a></li>";
+       if(!empty($user->facebookUrl)) echo "<li class='tooltip-social facebook-link'><a href='http://{$user->facebookUrl}' data-toggle='tooltip' data-placement='top' title='Facebook'><i class='fa fa-facebook-square fa-2x'></i></a></li>";
+       if(!empty($user->linkedInUrl)) echo "<li class='tooltip-social linkedin-link'><a href='http://{$user->linkedInUrl}' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-linkedin-square fa-2x'></i></a></li>";
+       if(!empty($user->twitterUrl)) echo "<li class='tooltip-social twitter-link'><a href='http://{$user->twitterUrl}' data-toggle='tooltip' data-placement='top' title='Twitter'><i class='fa fa-twitter-square fa-2x'></i></a></li>";
+       if(!empty($user->googlePlusUrl)) echo "<li class='tooltip-social google-plus-link'><a href='http://{$user->googlePlusUrl}' data-toggle='tooltip' data-placement='top' title='Google+'><i class='fa fa-google-plus-square fa-2x'></i></a></li>";
+       if(!empty($user->companyWebsiteUrl)) echo "<li class='tooltip-social linkedin-link'><a href='http://{$user->companyWebsiteUrl}' data-toggle='tooltip' data-placement='top' title='Website'><i class='fa fa-globe fa-2x'></i></a></li>";
+       if(!empty($user->youtubeUrl)) echo "<li class='tooltip-social google-plus-link'><a href='http://{$user->youtubeUrl}' data-toggle='tooltip' data-placement='top' title='YouTube'><i class='fa fa-youtube fa-2x'></i></a></li>";
     echo "</ul>";
 ?>
     </div> <!-- /.col3 -->

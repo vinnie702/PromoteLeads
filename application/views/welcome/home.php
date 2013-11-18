@@ -1,26 +1,26 @@
 
     <div id="myCarousel" class="carousel slide">
       <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        <!-- <ol class="carousel-indicators"> -->
+          <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
+          <!-- <li data-target="#myCarousel" data-slide-to="1"></li> -->
+          <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+        <!-- </ol> -->
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <div class="fill"><img src='/public/img/bannerRight2.jpg'></div>
-            <div class="carousel-caption alt">
-              <h1 class='title'>Welcome to Promote Leads, the future of Business Networking!</h1>
-            </div>
-          </div>
-          <div class="item">
             <div class="fill"><img src='/public/img/georgePic2.jpg'></div>
-            <div class="carousel-caption altBlack">
-              <h1 class='title'>Create connections for you businesses future</h1>
+            <div class="carousel-caption alt">
+              <h1>Welcome to Promote Leads, the future of Business Networking!</h1>
             </div>
           </div>
+          <!-- <div class="item"> -->
+          <!--   <div class="fill"><img src='/public/img/georgePic2.jpg'></div> -->
+          <!--   <div class="carousel-caption altBlack"> -->
+          <!--     <h1 class='title'>Create connections for you businesses future</h1> -->
+          <!--   </div> -->
+          <!-- </div> -->
           <!-- <div class="item"> -->
           <!--   <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div> -->
           <!--   <div class="carousel-caption"> -->

@@ -24,6 +24,7 @@ class chapter_model extends CI_Model
     {
         $this->db->from('userLocations');
         $this->db->where('location', $chapterId);
+        $this->db->order_by('id', 'random');
 
         $query = $this->db->get();
 
