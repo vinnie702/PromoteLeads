@@ -12,7 +12,7 @@
         {
             echo "<div class='col-sm-2'>";
                 echo "<div class='img-thumbnail'>";
-                    echo "<img src='http://bms.cgisolution.com/user/profileimg/150/5'>";
+                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/5'>";
                 echo "</div>";
             echo "</div>";
             echo "<div class='col-sm-3'>";
@@ -90,12 +90,12 @@
         }
             echo "<div class='col-sm-2'>";
                 echo "<a href='/members/profile/{$user->id}'><div class='img-thumbnail float-left'>";
-                    echo "<img src='http://bms.cgisolution.com/user/profileimg/150/{$id}'>";
+                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/{$id}'>";
                 echo "</div></a>";
             echo "</div>";
             echo "<div class='col-sm-2'>";
                 echo "<h4 class='title'>{$user->companyName}</h4>";
-                echo "<a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a> </br>";
+                echo "<p><a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a></p>";
                 echo "<p><i class='fa fa-envelope-o'></i> <abbr title='{$user->email}'>E</abbr>: <a href='mailto:{$user->email}'>E-Mail Me!</a></p>";
                 if(!empty($user->phone)) echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$user->phone}</p>";
             echo "</div>";
