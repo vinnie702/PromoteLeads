@@ -36,7 +36,7 @@
         <div class="col-sm-4">
 <?php
         echo "<div class='img-thumbnail'>";
-            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/5'>";
+            echo "<img src='https://bms.cgisolution.com/user/profileimg/250/5'>";
         echo "</div>";
 ?>
             <h3>George W. Burroughs III <small>C.E.O.</small></h3>
@@ -52,7 +52,7 @@
         <div class="col-sm-4">
 <?php
         echo "<div class='img-thumbnail'>";
-            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/2'>";
+            echo "<img src='https://bms.cgisolution.com/user/profileimg/250/2'>";
         echo "</div>";
 ?>
 
@@ -69,7 +69,7 @@
         <div class="col-sm-4">
 <?php
         echo "<div class='img-thumbnail'>";
-            echo "<img src='http://bms.cgisolution.com/user/profileimg/250/1'>";
+            echo "<img src='https://bms.cgisolution.com/user/profileimg/250/1'>";
         echo "</div>";
 ?>
             <h3>William Gallios <small>System Management</small></h3>
