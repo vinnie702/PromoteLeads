@@ -28,7 +28,7 @@
         {
             echo "<div class='col-sm-2'>";
                 echo "<div class='img-thumbnail'>";
-                    echo "<img src='http://bms.cgisolution.com/user/profileimg/150/{$cp->id}'>";
+                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/{$cp->id}'>";
                 echo "</div>";
             echo "</div>";
             echo "<div class='col-sm-3'>";
