@@ -55,7 +55,7 @@
     echo "<div class='col-sm-2'>";
     $locationPic = $locationImg->fileName;
     echo "<div class='img-thumbnail'>";
-            echo "<img src='https://promoteleads.cgisolution.com/genimg/render/150?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+            echo "<img src='https://bms.cgisolution.com/genimg/render/150?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
         echo "</div>";
     echo "</div>";
 ?>
