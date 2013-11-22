@@ -147,6 +147,24 @@ class member_model extends CI_Model
 
         return $videoID;
     }
+    
+    public function checkUrl($url)
+    {
+        $pattern = '/^http/i';
 
+        $preg = preg_match($pattern, $url);
+
+        if($preg == 0)
+        {
+            $newUrl = "http://{$url}";
+        }
+        else
+        {
+            $newUrl = $url;
+        }
+
+        // print_r($preg);
+        return $newUrl;
+    }
 
 }

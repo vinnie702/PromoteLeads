@@ -3,7 +3,8 @@
         <div class='headshot'>
 <?php
         echo "<div class='img-thumbnail'>";
-            echo "<img src='https://bms.cgisolution.com/user/profileimg/250/{$user->id}'>";
+            echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/250/{$user->id}'>";
+            echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/200/{$user->id}'>";
         echo "</div>";
 ?>
         </div> <!-- /.headshot -->
@@ -23,13 +24,20 @@
     if(!empty($user->mobile)) echo "<p>Mobile: {$user->mobile}</p>";
     if(!empty($user->fax)) echo "<p>Fax: {$user->fax}</p>";
 
+    $fb = $this->member->checkUrl($user->facebookUrl);
+    $li = $this->member->checkUrl($user->linkedInUrl);
+    $tw = $this->member->checkUrl($user->twitterUrl);
+    $gp = $this->member->checkUrl($user->googlePlusUrl);
+    $cw = $this->member->checkUrl($user->companyWebsiteUrl);
+    $yt = $this->member->checkUrl($user->youtubeUrl);
+
     echo "<ul class='list-unstyled list-inline list-social-icons'>";
-       if(!empty($user->facebookUrl)) echo "<li class='tooltip-social facebook-link'><a href='{$user->facebookUrl}' data-toggle='tooltip' data-placement='top' title='Facebook'><i class='fa fa-facebook-square fa-2x'></i></a></li>";
-       if(!empty($user->linkedInUrl)) echo "<li class='tooltip-social linkedin-link'><a href='{$user->linkedInUrl}' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-linkedin-square fa-2x'></i></a></li>";
-       if(!empty($user->twitterUrl)) echo "<li class='tooltip-social twitter-link'><a href='{$user->twitterUrl}' data-toggle='tooltip' data-placement='top' title='Twitter'><i class='fa fa-twitter-square fa-2x'></i></a></li>";
-       if(!empty($user->googlePlusUrl)) echo "<li class='tooltip-social google-plus-link'><a href='{$user->googlePlusUrl}' data-toggle='tooltip' data-placement='top' title='Google+'><i class='fa fa-google-plus-square fa-2x'></i></a></li>";
-       if(!empty($user->companyWebsiteUrl)) echo "<li class='tooltip-social linkedin-link'><a href='{$user->companyWebsiteUrl}' data-toggle='tooltip' data-placement='top' title='Website'><i class='fa fa-globe fa-2x'></i></a></li>";
-       if(!empty($user->youtubeUrl)) echo "<li class='tooltip-social google-plus-link'><a href='{$user->youtubeUrl}' data-toggle='tooltip' data-placement='top' title='YouTube'><i class='fa fa-youtube fa-2x'></i></a></li>";
+       if(!empty($user->facebookUrl)) echo "<li class='tooltip-social facebook-link'><a href='{$fb}' data-toggle='tooltip' data-placement='top' title='Facebook'><i class='fa fa-facebook-square fa-2x'></i></a></li>";
+       if(!empty($user->linkedInUrl)) echo "<li class='tooltip-social linkedin-link'><a href='{$li}' data-toggle='tooltip' data-placement='top' title='LinkedIn'><i class='fa fa-linkedin-square fa-2x'></i></a></li>";
+       if(!empty($user->twitterUrl)) echo "<li class='tooltip-social twitter-link'><a href='{$tw}' data-toggle='tooltip' data-placement='top' title='Twitter'><i class='fa fa-twitter-square fa-2x'></i></a></li>";
+       if(!empty($user->googlePlusUrl)) echo "<li class='tooltip-social google-plus-link'><a href='{$gp}' data-toggle='tooltip' data-placement='top' title='Google+'><i class='fa fa-google-plus-square fa-2x'></i></a></li>";
+       if(!empty($user->companyWebsiteUrl)) echo "<li class='tooltip-social linkedin-link'><a href='{$cw}' data-toggle='tooltip' data-placement='top' title='Website'><i class='fa fa-globe fa-2x'></i></a></li>";
+       if(!empty($user->youtubeUrl)) echo "<li class='tooltip-social google-plus-link'><a href='{$yt}' data-toggle='tooltip' data-placement='top' title='YouTube'><i class='fa fa-youtube fa-2x'></i></a></li>";
     echo "</ul>";
 ?>
     </div> <!-- /.col3 -->
@@ -42,7 +50,7 @@
         }
         else
         {
-            echo "<center><h2>This user has no video's uploaded yet</h2></center>";
+            echo "<center><h2>This user has no video's uploaded yet<br> Check back soon!!</h2></center>";
         }
 ?>
         </div> <!-- /.profileVideo -->
@@ -69,6 +77,15 @@
   </div>
   <div class="tab-pane purple-text" id="contactMember" name='contactMember'>
 <?php
+   if($user->id == 2)
+   {
+        echo "<div class='row'>";
+            echo "<div class='col-sm-12'>";
+                echo "<center><h3 class='title'>CGI Solution may already have the solution for your business! If not, we can make it ;)</h3><br>";
+                echo "You can also contact <a href='/members/profile/1'>William Gallios</a> our company CTO.<br></center>";
+            echo "</div>";
+        echo "</div>";
+   }
     $attr = array
         (
             'name' => 'contactUs',
@@ -122,7 +139,8 @@ echo form_open('welcome/saveContactForm', $attr);
         echo <<< EOS
             <div class='ytContainer'>
                 <div class='yt-body'>
-                    <iframe class='img-thumbnail' width="252" height="142" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
+                    <iframe class='hidden-sm hidden-md img-thumbnail' width="252" height="142" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
+                    <iframe class='visible-sm visible-md img-thumbnail' width="200" height="102" src="//www.youtube.com/embed/{$ytid}" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
 EOS;
