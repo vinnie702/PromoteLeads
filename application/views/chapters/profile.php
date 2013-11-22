@@ -12,7 +12,8 @@
         {
             echo "<div class='col-sm-2'>";
                 echo "<div class='img-thumbnail'>";
-                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/5'>";
+                    echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/150/5'>";
+                    echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/5'>";
                 echo "</div>";
             echo "</div>";
             echo "<div class='col-sm-3'>";
@@ -28,7 +29,8 @@
         {
             echo "<div class='col-sm-2'>";
                 echo "<div class='img-thumbnail'>";
-                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/{$cp->id}'>";
+                    echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/150/{$cp->id}'>";
+                    echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/{$cp->id}'>";
                 echo "</div>";
             echo "</div>";
             echo "<div class='col-sm-3'>";
@@ -55,11 +57,13 @@
     echo "<div class='col-sm-2'>";
     $locationPic = $locationImg->fileName;
     echo "<div class='img-thumbnail'>";
-            echo "<img src='https://bms.cgisolution.com/genimg/render/150?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+            echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/genimg/render/150?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+            echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/genimg/render/100?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
         echo "</div>";
     echo "</div>";
 ?>
 </div>
+
 <div class='row'>
     <div class='col-sm-12'>
 
@@ -90,7 +94,8 @@
         }
             echo "<div class='col-sm-2'>";
                 echo "<a href='/members/profile/{$user->id}'><div class='img-thumbnail float-left'>";
-                    echo "<img src='https://bms.cgisolution.com/user/profileimg/150/{$id}'>";
+                    echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/150/{$id}'>";
+                    echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/{$id}'>";
                 echo "</div></a>";
             echo "</div>";
             echo "<div class='col-sm-2'>";

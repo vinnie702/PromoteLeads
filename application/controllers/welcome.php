@@ -66,6 +66,13 @@ class Welcome extends CI_Controller {
             }
         }
     }
+
+    public function refundPolicy()
+    {
+        $this->load->view('template/header');
+        $this->load->view('welcome/refund');
+        $this->load->view('template/footer');
+    }
 }
 
 /* End of file welcome.php */
