@@ -1,6 +1,6 @@
 SELECT * FROM locations;
 
-SELECT * FROM users;
+SELECT id, lastName, firstName, email, status, deleted, companyName FROM users;
 
 SHOW TABLES;
 

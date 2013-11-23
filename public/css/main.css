@@ -154,3 +154,9 @@ li a
 {
     margin:15px;
 }
+
+.tabbed
+{
+    max-height:400px;
+    overflow:auto;
+}

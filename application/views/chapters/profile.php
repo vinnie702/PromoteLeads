@@ -89,17 +89,19 @@
 
         if($rcnt == 1)
         {
-            echo "<hr>";
+            echo "<hr class='hidden-xs'>";
             echo "<div class='row'>";
         }
             echo "<div class='col-sm-2'>";
                 echo "<a href='/members/profile/{$user->id}'><div class='img-thumbnail float-left'>";
                     echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/150/{$id}'>";
-                    echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/{$id}'>";
+                    echo "<img class='visible-md' src='https://bms.cgisolution.com/user/profileimg/100/{$id}'>";
+                    echo "<img class='visible-sm' src='https://bms.cgisolution.com/user/profileimg/75/{$id}'>";
                 echo "</div></a>";
             echo "</div>";
             echo "<div class='col-sm-2'>";
-                echo "<h4 class='title'>{$user->companyName}</h4>";
+                echo "<h4 class='title hidden-sm'>{$user->companyName}</h4>";
+                echo "<h5 class='visible-sm'>{$user->companyName}</h5>";
                 echo "<p><a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a></p>";
                 echo "<p><i class='fa fa-envelope-o'></i> <abbr title='{$user->email}'>E</abbr>: <a href='mailto:{$user->email}'>E-Mail Me!</a></p>";
                 if(!empty($user->phone)) echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$user->phone}</p>";
