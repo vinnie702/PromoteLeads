@@ -13,15 +13,18 @@
             echo "<div class='col-sm-2'>";
                 echo "<div class='img-thumbnail'>";
                     echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/user/profileimg/150/5'>";
-                    echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/5'>";
+                    echo "<img class='visible-md' src='https://bms.cgisolution.com/user/profileimg/100/5'>";
+                    echo "<img class='visible-sm' src='https://bms.cgisolution.com/user/profileimg/75/5'>";
                 echo "</div>";
             echo "</div>";
-            echo "<div class='col-sm-3'>";
+            echo "<div class='col-md-3 col-sm-4'>";
                 echo "<center><h5 class='title'>Acting Chapter President</h5></center>";
-                echo "<a href='/members/profile/5'><strong>George W Burroughs III</strong></a></br>";
-                echo "Promote Leads President";
+                echo "<a class='hidden-sm' href='/members/profile/5'><strong>George W Burroughs III</strong></a></br>";
+                echo "<a class='visible-sm' href='/members/profile/5'>George W Burroughs III</a></br>";
+                echo "<p><small>Promote Leads President</small></p>";
                 echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: (702) 530-0055</p>";
-                echo "<p><i class='fa fa-envelope-o'></i> <abbr title='Email'>E</abbr>: <a href='mailto:george@promoteleads.com'>george@promoteleads.com</a></p>";
+                echo "<p class='hidden-sm'><i class='fa fa-envelope-o'></i> <abbr title='Email'>E</abbr>: <a href='mailto:george@promoteleads.com'>george@promoteleads.com</a></p>";
+                echo "<p class='visible-sm'><i class='fa fa-envelope-o'></i> <abbr title='Email'>E</abbr>: <a href='mailto:george@promoteleads.com'>Email Me!</a></p>";
                 echo "<p><i class='fa fa-globe'></i> <abbr title='Website'>W</abbr>: <a href='http://www.promoteleads.com'>Promote Leads</a></p>";
             echo "</div>";
         }
@@ -33,7 +36,7 @@
                     echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/user/profileimg/100/{$cp->id}'>";
                 echo "</div>";
             echo "</div>";
-            echo "<div class='col-sm-3'>";
+            echo "<div class='col-md-3 col-sm-4'>";
                 echo "<center><h5 class='title'>Chapter President</h5></center>";
                 echo "<a href='/members/profile/{cp->id}'><strong>{$cp->firstName} {$cp->lastName}</strong></a></br>";
                 echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$cp->phone}</p>";
@@ -43,9 +46,9 @@
         }
 ?>
 
-    <div class='col-sm-2'>
+    <div class='col-md-2 hidden-sm'>
     </div>
-    <div class='col-sm-3'>
+    <div class='col-md-3 col-sm-4'>
 <?php
         echo "<center>";
             echo "<h5 class='title'>{$chapter->name}</h5>";
@@ -58,7 +61,8 @@
     $locationPic = $locationImg->fileName;
     echo "<div class='img-thumbnail'>";
             echo "<img class='hidden-sm hidden-md' src='https://bms.cgisolution.com/genimg/render/150?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
-            echo "<img class='visible-sm visible-md' src='https://bms.cgisolution.com/genimg/render/100?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+            echo "<img class='visible-md' src='https://bms.cgisolution.com/genimg/render/100?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
+            echo "<img class='visible-sm' src='https://bms.cgisolution.com/genimg/render/75?img=" .urlencode($locationPic) . "&path=" .urlencode("locationimgs") . "'>";
         echo "</div>";
     echo "</div>";
 ?>
@@ -102,9 +106,12 @@
             echo "<div class='col-sm-2'>";
                 echo "<h4 class='title hidden-sm'>{$user->companyName}</h4>";
                 echo "<h5 class='visible-sm'>{$user->companyName}</h5>";
-                echo "<p><a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a></p>";
-                echo "<p><i class='fa fa-envelope-o'></i> <abbr title='{$user->email}'>E</abbr>: <a href='mailto:{$user->email}'>E-Mail Me!</a></p>";
-                if(!empty($user->phone)) echo "<p><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$user->phone}</p>";
+                echo "<p class='hidden-sm'><a href='/members/profile/{$user->id}'><strong>{$user->firstName} {$user->lastName}</strong></a></p>";
+                echo "<p class='visible-sm'><a href='/members/profile/{$user->id}'>{$user->firstName} {$user->lastName}</a></p>";
+                echo "<p class='hidden-sm'><i class='fa fa-envelope-o'></i> <abbr title='{$user->email}'>E</abbr>: <a href='mailto:{$user->email}'>E-Mail Me!</a></p>";
+                echo "<p class='visible-sm pull-left'><a href='mailto:{$user->email}'><abbr title='{$user->email}'><i class='fa fa-envelope-o'></i> E</abbr></a></p>";
+                if(!empty($user->phone)) echo "<p class='hidden-sm'><i class='fa fa-phone'></i> <abbr title='Phone'>P</abbr>: {$user->phone}</p>";
+                if(!empty($user->phone)) echo "<p class='visible-sm pad-left'><abbr title='{$user->phone}'><i class='fa fa-phone'></i> P</abbr> </p>";
             echo "</div>";
         if($rcnt == 3)
         {
