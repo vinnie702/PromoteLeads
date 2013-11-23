@@ -150,7 +150,18 @@ li a
     padding-bottom:25px;
 }
 
+.pad-left
+{
+    padding-left:35px;
+}
+
 .img-thumbnail
 {
     margin:15px;
+}
+
+.tabbed
+{
+    max-height:400px;
+    overflow:auto;
 }
