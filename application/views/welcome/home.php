@@ -45,7 +45,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-4">
             <center><h3 class='title'><i class="fa fa-check-circle"></i> What's New?</h3></center>
-<hr>
+                <hr>
             <!-- <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p> -->
             <ul>
                 <li>If you are interested in having a Chapter in your area or being an officer for a Chapter, please contact George Burroughs at 702-756-8378 or georgewburroughs@yahoo.com for more information </li>
@@ -73,13 +73,7 @@
            <!-- <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p> -->
         </div>
         </div><!-- /.row -->
-
       </div><!-- /.container -->
-
-    </div><!-- /.section -->
-
-    <div class="section">
-
-      <div class="container">
+    </div><!-- /.section-colored -->
 
 
