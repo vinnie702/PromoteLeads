@@ -1,4 +1,6 @@
 
+    <div class="section">
+      <div class="container">
       <hr>
         <div class="row">
           <div class="col-lg-12">
@@ -7,11 +9,5 @@
             <hr>
           </div>
         </div><!-- /.row -->
-
       </div><!-- /.container -->
-
-    </div><!-- /.section-colored -->
-    <div class="container">
-
-
-
+    </div><!-- /.section -->
