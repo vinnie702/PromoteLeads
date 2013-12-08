@@ -47,7 +47,7 @@
             <center><h3 class='title'><i class="fa fa-check-circle"></i> What's New?</h3></center>
                 <hr>
             <!-- <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p> -->
-            <ul>
+            <ul class='font-black'>
                 <li>If you are interested in having a Chapter in your area or being an officer for a Chapter, please contact George Burroughs at 702-756-8378 or georgewburroughs@yahoo.com for more information </li>
                 <li>Be on the lookout for our new Chapters, Downtown and Southwest Las Vegas that will be coming online very soon</li>
                 <li>All first time visitors to any of the Promote Leads Referral groups are asked to arrive 30 minutes prior to the start of any chapter meeting, so we can welcome you and explain our model </li>
@@ -65,12 +65,14 @@
           <!-- <div class="col-lg-4 col-md-4"> -->
             <center><h3 class='title'><i class="fa fa-check-circle"></i> What is Promote Leads?</h3></center>
             <hr>
+<div class='font-black'>
             <p>Promoteleads.com is your number one source for business referrals and networking. We are one of the largest business networking groups in Las Vegas.</p>
             <p>Our mission is to help connect you with other business and industry professionals through bi-weekly mixers we host to exchange ideas, create business alliances, and provide leads, generating customers and more profit for your business!</p>
             <p>We'll accomplish these goals with a variety of tools including a business profile and a customized 5 minute commercial for your business cut and edited on our website, full color group brochures advertising yours and your groups business, lockout groups, business education seminars with experienced business professionals and Mastermind Groups.</p>
             <p>In the Mastermind Groups, you'll present challenges in your business to fellow group members and brainstorm to generate solutions to your challenges.</p>
             <p>In addition, our website will benefit you immensely through our leads software program.  This program allows your fellow group members to forward hot leads to directly to you via your e-mail! </p>
-           <!-- <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p> -->
+</div> <!-- /.font-black -->
+            <!-- <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p> -->
         </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
