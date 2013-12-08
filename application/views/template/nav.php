@@ -52,6 +52,7 @@
        <!--      <li><a href="blog-post.html">Blog Post</a></li> -->
        <!--    </ul> -->
        <!--  </li> -->
+        <li><a href="https://promoteleads.cgisolution.com/register"><strong>Sign Up!</strong></a></li>
         <li><a href="https://promoteleads.cgisolution.com/intranet/login"><strong>Members Area</strong></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
