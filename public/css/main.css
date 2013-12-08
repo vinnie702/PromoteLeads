@@ -165,3 +165,18 @@ li a
     max-height:400px;
     overflow:auto;
 }
+
+.font-black
+{
+    color:#000000;
+}
+
+.font-grey
+{
+    color:#9D9C9B;
+}
+
+.font-gold
+{
+    color:#FFAA00;
+}
